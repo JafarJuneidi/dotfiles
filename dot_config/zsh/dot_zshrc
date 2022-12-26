@@ -1,0 +1,40 @@
+eval "$(starship init zsh)"
+# DISABLE_UNTRACKED_FILES_DIRTY="true"
+
+HISTFILE=~/.zsh_history
+HISTSIZE=1000
+SAVEHIST=1000
+# setopt appendhistory
+
+# User configuration
+# Exports
+export ZDOTDIR=$HOME/.config/zsh/
+# export PATH=$HOME/bin:/usr/local/bin:$PATH
+# export PATH=~/.npm-global/bin:$PATH
+# export PATH=~/.local/bin:$PATH
+# export PATH="$PATH:/home/jafar/.local/share/coursier/bin"
+# export LANG='es_CO.utf8'
+export EDITOR='nvim'
+export VISUAL='nvim'
+
+# Directory commands
+alias ls='ls --color=auto'
+alias l='ls -a --color=auto'
+alias ll='ls -la'
+alias c='clear'
+
+# Lunarvim Fast
+alias vim='nvim'
+
+# Antidote initialization
+# source '/usr/share/zsh-antidote/antidote.zsh'
+source ${ZDOTDIR:-~}/.antidote/antidote.zsh
+antidote load
+
+# nvm dir config
+export NVM_DIR="$HOME/.config/.nvm"
+[ -s "$NVM_DIR/nvm.sh" ] && \. "$NVM_DIR/nvm.sh"  # This loads nvm
+[ -s "$NVM_DIR/bash_completion" ] && \. "$NVM_DIR/bash_completion"  # This loads nvm bash_completion
+#
+# cargo dir config
+. "$HOME/.cargo/env"
