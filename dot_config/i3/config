@@ -5,8 +5,7 @@ set $mod Mod4
 #--------------------------EXECUTABLES-----------------------------------
 exec_always "bash ~/.config/polybar/launch.sh"
 exec_always feh --randomize --bg-fill /mnt/warehouse/wallpapers/*
-# exec_always picom &
-# exec_always --no-startup-id picom &
+exec_always picom &
 # exec "fluxgui"
 # exec "setxkbmap latam"
 exec "ip link set wlp4s0 down"
