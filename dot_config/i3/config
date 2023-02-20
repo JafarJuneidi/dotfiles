@@ -7,7 +7,7 @@ exec_always "bash ~/.config/polybar/launch.sh"
 exec_always feh --randomize --bg-fill /mnt/warehouse/wallpapers/*
 exec_always picom &
 # exec "fluxgui"
-# exec "setxkbmap latam"
+exec "setxkbmap 'us(dvorak)'"
 exec "ip link set wlp4s0 down"
 # exec_always "xmodmap ~/.config/xmodmap/custom_config"
 #-------------------------------------------------------------------------
@@ -79,7 +79,7 @@ bindsym $mod+v split v
 
 # Container Layout
 bindsym $mod+s layout stacking
-bindsym $mod+w layout tabbed
+bindsym $mod+t layout tabbed
 bindsym $mod+e layout toggle split
 
 # Container Focus
@@ -96,7 +96,7 @@ set $ws4 "4: Game  "
 set $ws5 "5"
 set $ws6 "6"
 set $ws7 "7"
-set $ws8 "8: Discrod  ﭮ"
+set $ws8 "8: Discrod"
 set $ws9 "9: Spotify  "
 set $ws10 "10"
 
@@ -126,7 +126,7 @@ bindsym $mod+Shift+0 move container to workspace number $ws10
 #---------------------------------------APPLICATIONS---------------------------
 for_window [class="Steam"] move to workspace $ws4
 for_window [class="Spotify"] move to workspace $ws9
-for_window [class="Discord (Internet Messenger)"] move to workspace $ws8
+for_window [class="Discord"] move to workspace $ws8
 #------------------------------------------------------------------------------
 
 #---------------------------------------FUNCTIONS------------------------------
